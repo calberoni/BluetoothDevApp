@@ -857,11 +857,3 @@ in the Software without restriction...
 - ⚡ Compose con skip optimizations
 
 ---
-
-<div align="center">
-
-**[⬆ Volver arriba](#bluetooth-dev-app---android-ble-controller)**
-
-Hecho con ❤️ y Kotlin
-
-</div>
