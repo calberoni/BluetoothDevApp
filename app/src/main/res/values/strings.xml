@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Bluetooth Dev App</string>
+    <string name="open_gate">ABRIR</string>
+    <string name="status_ready">Listo para abrir</string>
+    <string name="status_scanning">Escaneando dispositivo…</string>
+    <string name="status_connecting">Conectando…</string>
+    <string name="status_opening">Abriendo pluma…</string>
+    <string name="status_success">¡Listo!</string>
+    <string name="error_bluetooth_disabled">Bluetooth desactivado</string>
+    <string name="error_device_not_found">Dispositivo no encontrado</string>
+    <string name="error_connection_failed">Error de conexión</string>
+    <string name="error_permission_denied">Permisos necesarios denegados</string>
+    <string name="permission_rationale">Esta app necesita permisos de Bluetooth para conectarse a la pluma del estacionamiento</string>
+    <string name="enable_bluetooth">Activar Bluetooth</string>
+</resources>

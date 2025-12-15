@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!--
+        Permisos necesarios para BLE (Bluetooth Low Energy)
+
+        Para Android 12+ (API 31+):
+        - BLUETOOTH_SCAN: Escanear dispositivos BLE cercanos
+        - BLUETOOTH_CONNECT: Conectarse a dispositivos BLE
+        - BLUETOOTH_ADVERTISE: Anunciar servicios BLE (opcional para este caso)
+
+        Para Android 11 y anteriores:
+        - BLUETOOTH: Operaciones bluetooth básicas
+        - BLUETOOTH_ADMIN: Descubrir y emparejar dispositivos
+        - ACCESS_FINE_LOCATION: Requerido para escaneo BLE en versiones antiguas
+    -->
+
+    <!-- Permisos para Android 12+ (API 31+) -->
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN"
+        android:usesPermissionFlags="neverForLocation"
+        tools:targetApi="s" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+
+    <!-- Permisos para Android 11 y anteriores -->
+    <uses-permission android:name="android.permission.BLUETOOTH"
+        android:maxSdkVersion="30" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"
+        android:maxSdkVersion="30" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"
+        android:maxSdkVersion="30" />
+
+    <!-- Permiso para vibración (feedback háptico) -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <!-- Declarar que la app requiere BLE -->
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@android:drawable/ic_dialog_info"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.BluetoothDevApp"
+        tools:targetApi="31">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.BluetoothDevApp">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- FileProvider para compartir logs de debug -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.parkingate.controller.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_provider_paths" />
+        </provider>
+    </application>
+
+</manifest>
