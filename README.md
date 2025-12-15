@@ -760,34 +760,6 @@ adb logcat -d AndroidRuntime:E *:F > error_log.txt
 
 ---
 
-## Roadmap
-
-### Versión 1.1 (Q1 2025)
-- [ ] Soporte multi-dispositivo (múltiples ESP32)
-- [ ] Escaneo continuo en background
-- [ ] Notificaciones de proximidad
-- [ ] Widget de home screen
-
-### Versión 1.2 (Q2 2025)
-- [ ] Autenticación de usuario (Firebase)
-- [ ] Sincronización cloud de UUIDs
-- [ ] Historial remoto
-- [ ] Compartir acceso temporal
-
-### Versión 2.0 (Q3 2025)
-- [ ] Geofencing automático
-- [ ] Integración con Google Assistant
-- [ ] Wear OS companion app
-- [ ] API pública para integraciones
-
-### Futuro
-- [ ] Soporte para otros protocolos (WiFi, MQTT)
-- [ ] Dashboard web para administración
-- [ ] App iOS (SwiftUI)
-- [ ] Soporte empresarial (múltiples organizaciones)
-
----
-
 ## Contribución
 
 ¡Las contribuciones son bienvenidas! Por favor:
